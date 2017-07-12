@@ -1,0 +1,40 @@
+/* Styles for the large-hero element */
+
+.large-hero {
+  position: relative;
+
+/* '&' repeats the main class (large-hero) in a nested block like this */
+  &__text-content {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  &__title {
+    font-weight: 300;
+    color: $mainBlue;
+    /* rem = root em, bases size on the root size of the html. Default for
+      most browsers is around 16px. rem respects the user's choice to reset the root */
+    font-size: 4.8rem;
+    margin: 0;
+  }
+  &__subtitle {
+    font-weight: 300;
+    color: $mainBlue;
+    font-size: 2.9rem;
+    margin: 0;
+  }
+
+  &__description {
+    color: #fff;
+    font-size: 1.875rem;
+    font-weight: 100;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, .1);
+    max-width: 30rem; /* ie, 450px default */
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
