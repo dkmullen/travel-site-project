@@ -1,7 +1,7 @@
 /*jshint esversion: 6 */
 
 const gulp = require('gulp'),
-  watch = require('gulp-watch'), // monitor chages to files and react
+  watch = require('gulp-watch'), // monitor changes to files and react
   browserSync = require('browser-sync').create(); // Browser auto refresh, sync across many screens
 
 gulp.task('watch', () => {

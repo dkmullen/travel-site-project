@@ -8,3 +8,9 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+/* asterisk calls for all elements to be affected */
+* {
+  /* changes how browsers calc widths */
+  box-sizing: border-box;
+}
