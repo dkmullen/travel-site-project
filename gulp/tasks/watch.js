@@ -21,11 +21,22 @@ gulp.task('watch', () => {
   watch('./app/assets/styles/**/*.css', () => {
     gulp.start('cssInject');
   });
+
+  // On changes to any js file in this path, run the scripts task, above
+    watch('./app/assets/scripts/**/*.js', () => {
+      gulp.start('scriptsRefresh');
+    });
+
 });
+
 
 /* Below, styles is a dependency, meaning cssInject won't run till styles
     runs and updates the css */
 gulp.task('cssInject', ['styles'], () => {
   return gulp.src('./app/temp/styles/styles.css')
     .pipe(browserSync.stream());
+});
+
+gulp.task('scriptsRefresh', ['scripts'], () => {
+  browserSync.reload();
 });
